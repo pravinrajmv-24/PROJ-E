@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home FullPage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="../CSS/Homepage.css" rel="stylesheet">
+    <!-- Bootstrap CSS CDN -->
+</head>
+
+<body>
+    <!-- nav -->
+    <nav class="navbar  bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">Tech-Shop</a>
+
+            <div class="d-flex align-items-center">
+
+                <!-- Icons -->
+                <div class="icons">
+                    <a href="product-details.html" class="icons">
+                        <i class="fas fa-magnifying-glass" title="Search"></i>
+                    </a>
+                    <span class="icons">
+                        <i class="fas fa-user" data-bs-toggle="modal" data-bs-target="#exampleModal" title="User"></i>
+                    </span>
+                    <a href="Cart.html" class="icons">
+                        <i class="fas fa-cart-shopping" title="Cart"></i>
+                    </a>
+                </div>
+            </div>
+    </nav>
+    <!-- navbar ended -->
+    <!-- signupform -->
+
+
+    <!-- Modal -->
+
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+        data-bs-theme="dark">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-3 m-0 border-0 bd-example m-0 border-0 bg-dark border-bottom border-body"
+                    data-bs-theme="dark">
+                    <div class="container" id="modalLogin">
+
+                        <div class="FullPage" id="modalLogin">
+
+                            <div class="Signup">
+                                <h5>Signup</h5>
+                            </div>
+
+                            <p>Already have an account? <a href="#">Login</a></p>
+
+                            <form>
+                                <input type="text" class="FormContent" placeholder="Username" required>
+                                <input type="email" class="FormContent" placeholder="E-mail" required>
+                                <input type="password" class="FormContent" placeholder="Password" required>
+                                <input type="password" class="FormContent" placeholder="Confirm Password" required>
+                                <button type="submit" class="ButtonContent">Signup</button>
+                            </form>
+
+                            <p class="text">or login with</p>
+
+                            <div class="Social-Content">
+                                <button class="facebook">Facebook</button>
+                                <button class="google">Google</button>
+                                <button class="twitter">Twitter</button>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Toggle Button -->
+                        <div class="toggle-btn">
+                            <span id="toggle-action" style="cursor: pointer; color: #3498db;"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <p class="" data-bs-dismiss="modal"></p>
+                    <p class=""></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- signup completed -->
+    <!-- sliders -->
+
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../IMAGES/Neckbands.jpeg" class="d-block w-100" alt="...">
+                <div class="post">
+                    <h3 class="topic">boAt-Airpodes131</h3>
+                    <p class="tsubheading">Featherweight For<br> Comfort All-Day.</p>
+                    <p class="tprice">
+                        <span class="tcurrent-price">₹1,099</span>
+                        <span class="toriginal-price">₹2,990</span>
+                    </p>
+                    <button class="tshop-now">Shop Now</button>
+
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../IMAGES/In ear.jpeg" class="d-block w-100" alt="...">
+                <div class="post">
+                    <h3 class="topic">Sony WH-XBN910N</h3>
+                    <p class="tsubheading">Give you favourite <br> Music a Boost.</p>
+                    <p class="tprice">
+                        <span class="tcurrent-price">₹13,489</span>
+                        <span class="toriginal-price">₹19,990</span>
+                    </p>
+                    <button class="tshop-now">Shop Now</button>
+
+                </div>
+
+
+            </div>
+            <div class="carousel-item">
+                <img src="../IMAGES/Over ear.jpeg" class="d-block w-100" alt="...">
+                <div class="post">
+                    <h3 class="topic">boAt-Airpodes131</h3>
+                    <p class="tsubheading">Keep the noise out<br> or,in your choice.</p>
+                    <p class="tprice">
+                        <span class="tcurrent-price">₹1,099</span>
+                        <span class="toriginal-price">₹2,990</span>
+                    </p>
+                    <button class="tshop-now">Shop Now</button>
+
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- </main> -->
+    <!-- featured products -->
+    <section class=" p-5">
+        <h2 class="text-center p-5 fp1">Featured Products</h2>
+        <div class="d-flex justify-content-center">
+
+            <div class="d-flex p-2 ">
+                <div class="p-5 m-5 fp1">
+                    <h6>boat Rockerz 518</h6>
+                    <img src="../IMAGES/boat518-1.png" alt="" height="100px">
+                    <h6>₹1,299 <del class="text-secondary">₹3,990</del></h6>
+                </div>
+
+                <div class="p-4 m-4 fp1">
+                    <h6>JBL Live 200BT</h6>
+                    <img src="../IMAGES/jbl200bt-1.png" height="150px" alt="">
+                    <h5>₹3,699 <del class="text-secondary">₹5,299</del></h5>
+                </div>
+
+                <div class="p-5 m-2 fp1">
+                    <h4>Sony WH-XB910N</h4>
+                    <img src="../IMAGES/sonyXb910n-1.png" height="200px" alt="">
+                    <h4>₹13,489 <del class="text-secondary">₹19,990</del></h4>
+                </div>
+
+                <div class="p-4 m-4 fp1">
+                    <h6>Sony WF-1000XM4 </h6>
+                    <img src="../IMAGES/sony1000xm4-1.png" height="150px" alt="">
+                    <h5>₹19,990 <del class="text-secondary">₹24,990</del></h5>
+                </div>
+
+                <div class="p-5 m-5 fp1">
+                    <h6>JBL Tune 760NC</h6>
+                    <img src="../IMAGES/jbl760nc-1.png" height="100px" alt="">
+                    <h6>₹5,999 <del class="text-secondary">₹7,999</del></h6>
+                </div>
+            </div>
+    </section>
+
+    <!-- cards -->
+    <div class="container py-5">
+        <div class="headings text-center">
+            <h2>Top Products</h2>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigations d-flex justify-content-center mb-4">
+            <button class="btn btn-dark me-2">All</button>
+            <button class="btn btn-dark me-2">Headphones</button>
+            <button class="btn btn-dark me-2">Earbuds</button>
+            <button class="btn btn-dark me-2">Earphones</button>
+            <button class="btn btn-dark">Neckbands</button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="row g-4">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="products">
+                    <img src="../IMAGES/jbl660nc-1.png" alt="JBL Live 600NC">
+                    <h3 class="text-danger">★★★★★</h3>
+                    <h3 class="products-title">JBL Live 660NC</h3>
+                    <p class="products-text">Wireless Over-Ear NC Headphones</p>
+                    <p class="price">&#8377;9,999 <span class="original-price">&#8377;14,999</span></p>
+                    <button class="button">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="products">
+                    <img src="../IMAGES/boat518-1.png" alt="Boat Rockerz 518">
+                    <h3 class="text-danger">★★★★★</h3>
+                    <h3 class="products-title">boAt Rockerz 518</h3>
+                    <p class="products-text">On-Ear Wireless Headphones</p>
+                    <p class="price">&#8377;1,299 <span class="original-price">&#8377;3,999</span></p>
+                    <button class="button">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="products">
+                    <img src="../IMAGES/boat131-1.png" alt="Boat Airdopes 131">
+                    <h3 class="text-danger">★★★★★</h3>
+                    <h3 class="products-title">boAt Airdopes 131</h3>
+                    <p class="products-text">Wireless in-Ear Earbuds</p>
+                    <p class="price">&#8377;1,099 <span class="original-price">&#8377;2,999</span></p>
+                    <button class="button">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="products">
+                    <img src="../IMAGES/boat110-1.png" alt="Boat BassHeads 110">
+                    <h3 class="text-danger">★★★★★</h3>
+                    <h3 class="products-title">boAt BassHeads 110</h3>
+                    <p class="products-text">In-Ear Wired Earphones</p>
+                    <p class="price">&#8377;449 <span class="original-price">&#8377;999</span></p>
+                    <button class="button">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="products">
+                    <img src="../IMAGES/boat410-1.png" alt="Boat Rockerz 410">
+                    <h3 class="text-danger">★★★★★</h3>
+                    <h3 class="products-title">boAt Rockerz 410</h3>
+                    <p class="products-text">Bluetooth & Wired On-Ear Headphones</p>
+                    <p class="price">&#8377;1,599 <span class="original-price">&#8377;2,990</span></p>
+                    <button class="button">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="products">
+                    <img src="../IMAGES/jbl200bt-1.png" alt="JBL Live 200BT">
+                    <h3 class="text-danger">★★★★★</h3>
+                    <h3 class="products-title">JBL Live 200BT</h3>
+                    <p class="products-text">In-Ear Wireless Neckbands</p>
+                    <p class="price">&#8377;3,699 <span class="original-price">&#8377;5,299</span></p>
+                    <button class="button">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="products">
+                    <img src="../IMAGES/sonyXb910n-1.png" alt="Sony WH-XB910N">
+                    <h3 class="text-danger">★★★★★</h3>
+                    <h3 class="products-title">Sony WH-XB910N</h3>
+                    <p class="products-text">Wireless Over-Ear Headphones</p>
+                    <p class="price">&#8377;13,489 <span class="original-price">&#8377;19,990</span></p>
+                    <button class="button">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="products">
+                    <img src="../IMAGES/jbl760nc-1.png" alt="JBL Tune 760NC">
+                    <h3 class="text-danger">★★★★★</h3>
+                    <h3 class="products-title">JBL Tune 760NC</h3>
+                    <p class="products-text">Wireless Over-Ear NC Headphones</p>
+                    <p class="price">&#8377;5,999 <span class="original-price">&#8377;7,999</span></p>
+                    <button class="button">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="products">
+                    <img src="../IMAGES/boat255r-1.png" alt="Boat Rockerz 255">
+                    <h3 class="text-danger">★★★★★</h3>
+                    <h3 class="products-title">boAt Rockerz 255</h3>
+                    <p class="products-text">In-Ear Wireless Neckbands</p>
+                    <p class="price">&#8377;899 <span class="original-price">&#8377;2,990</span></p>
+                    <button class="button">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="products">
+                    <img src="../IMAGES/jbl100-1.png" alt="JBL Wave 100">
+                    <h3 class="text-danger">★★★★★</h3>
+                    <h3 class="products-title">JBL Wave 100</h3>
+                    <p class="products-text">In-Ear Truly Wireless Earbuds</p>
+                    <p class="price">&#8377;2,999 <span class="original-price">&#8377;6,999</span></p>
+                    <button class="button">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="products">
+                    <img src="../IMAGES/sony1000xm4-1.png" alt="Sony WF-1000XM4">
+                    <h3 class="text-danger">★★★★★</h3>
+                    <h3 class="products-title">Sony WF-1000XM4</h3>
+                    <p class="products-text">Wireless In-Ear NC Headphones</p>
+                    <p class="price">&#8377;19,990 <span class="original-price">&#8377;24,990</span></p>
+                    <button class="button">Add to cart</button>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="browse-card">
+                    <div class="browse-body">
+                        <h5 class="card-title">Browse All---></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Advantages Items  -->
+    <div class="footerbgcolor">
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <!-- Our Advantages Section -->
+            <div class="advantages">
+                <h3 class="advant">Our Advantages</h3>
+                <div class="row text-center">
+                    <div class="col-6 col-md-3">
+                        <div class="advantage-item">
+                            <i class="fa-solid fa-truck" style="color: red; font-size: 30px;"></i>
+                            <p>Express Delivery</p>
+                            <small>Ships in 24 Hours</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="advantage-item">
+                            <i class="fa-solid fa-shield-halved" style="color: red; font-size: 30px;"></i>
+                            <p>Brand Warranty</p>
+                            <small>100% Original Products</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="advantage-item">
+                            <i class="fas fa-tags" style="color: red; font-size: 30px;"></i>
+                            <p>Exciting Deals</p>
+                            <small>On all prepaid orders</small>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="advantage-item">
+                            <i class="fas fa-credit-card" style="color: red; font-size: 30px;"></i>
+                            <p>Secure Payments</p>
+                            <small>SSL / Secure Certificate</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Footer Section  -->
+
+    <footer>
+        <div class="footer-fullpage">
+
+            <div class="footer-leftside">
+                <h2>Tech-Shop</h2>
+                <p>Subscribe to our Email alerts to recieve early discount offers, and new products info.
+                </p>
+                <form>
+                    <input type="email" class="form-email" placeholder="Email Address*" required><br>
+                    <button type="submit" class="form-button">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-rightside help">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Cancel Order</a></li>
+                    <li><a href="#">Return Order</a></li>
+                    <li><a href="#">Waranty Info</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-rightside policies">
+                <h3>Policies</h3>
+                <ul>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-rightside company">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Services Centres</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-end">
+            <p>2024 | All Rights Reserved. Built by | <strong>@PRAVINRAJ M V</strong></p>
+            <div class="footer-sociallinks">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>

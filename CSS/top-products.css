@@ -1,0 +1,89 @@
+body {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.headings h2 {
+    margin-bottom: 20px;
+}
+
+.navigations .btn {
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.navigations .btn:hover {
+    background-color: #a00;
+}
+
+.products {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+
+.products img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.products-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.products-text {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.1rem;
+    color: #f00;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 10px;
+}
+
+.button {
+    background-color: #f00;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #c00;
+}
+
+.browse-card {
+    max-width: 350px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.browse-card:hover {
+    transform: scale(1.05);
+}
+
+.browse-card .card-body {
+    text-align: center;
+}

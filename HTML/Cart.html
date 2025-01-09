@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        #mn1 {
+            margin-top: 120px;
+        }
+
+        #sec1 {
+            width: 50%;
+            height: 500px;
+        }
+
+        #sec2 {
+            width: 50%;
+        }
+
+        #p1 {
+            border: 1px solid wheat;
+            width: 150px;
+            text-align: center;
+        }
+
+        */ .cart-content {
+            color: #ccc !important;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .cart-items {
+            width: 40%;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #444;
+            padding: 10px 0;
+        }
+
+        .product-img {
+            width: 230px;
+            height: 230px;
+            border-radius: 5px;
+        }
+
+        .item-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .price {
+            display: flex;
+            align-items: center;
+        }
+
+        .current-price {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #ccc;
+            margin-right: 10px;
+        }
+
+        .original-price {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #888;
+            text-decoration: line-through;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .quantity-control button {
+            background-color: #444;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .item-quantity {
+            margin: 0 10px;
+            font-size: 16px;
+            color: red;
+        }
+
+        .delete-icon {
+            position: relative;
+            bottom: 70px;
+            color: #888;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .order-summary {
+            font-weight: 700;
+            font-size: 24px;
+            width: 25%;
+            background-color: rgb(32, 32, 32) !important;
+            position: relative;
+            top: 70px;
+            left: 40px;
+            padding: 30px;
+            border-radius: 5px;
+            margin-right: 150px;
+            height: 580px;
+        }
+
+        .summary-item {
+            font-size: 18px !important;
+            color: #696969 !important;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .discount {
+            position: relative;
+            bottom: 45px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 50px;
+        }
+
+        .navbar {
+            padding: 1rem;
+        }
+
+        .navbar .icons i {
+            font-size: 1.2rem;
+            margin-left: 15px;
+
+        }
+
+        .icons {
+            color: rgb(197, 195, 195) !important;
+        }
+
+        .navbar-brand {
+            color: rgb(197, 195, 195);
+        }
+
+        body {
+            background-color: black;
+        }
+
+
+        .cart-items {
+            margin-top: 50px;
+            margin-left: 70px;
+            width: 55%;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 5px;
+            max-height: 600px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #888 #222;
+        }
+
+        .cart-items::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .cart-items::-webkit-scrollbar-thumb {
+            background-color: #888;
+            border-radius: 5px;
+        }
+
+        .cart-items::-webkit-scrollbar-thumb:hover {
+            background-color: #666;
+        }
+
+        span {
+            position: relative;
+            top: 10px;
+        }
+
+        h6 {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 10px;
+        }
+
+        footer {
+            background-color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .footer-fullpage {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+        }
+
+        .footer-leftside,
+        .footer-rightside {
+            margin: 10px;
+            flex: 1;
+            width: 10px;
+        }
+
+        .footer-leftside h2,
+        .footer-rightside h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .footer-leftside p {
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-email {
+            width: 80%;
+            padding: 12px;
+            border: 1px solid grey;
+            border-radius: 2px;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+        }
+
+        .form-button {
+            width: 30%;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .form-button:hover {
+            background-color: darkred;
+        }
+
+        .footer-rightside h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-rightside help {
+            padding: 30px 20px;
+        }
+
+        .footer-rightside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-rightside ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-rightside ul li a {
+            color: whitesmoke;
+            text-decoration: none;
+            padding: 2px;
+        }
+
+        .footer-rightside ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-end {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-top: 1px solid darkgray;
+            background-color: black;
+            color: white;
+            align-items: center;
+            font-size: 15px;
+            border-top: 1px solid darkgray;
+        }
+
+        .footer-end p {
+            margin: 10px 0;
+        }
+
+        .footer-end strong {
+            color: whitesmoke;
+        }
+
+        .footer-sociallinks {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-sociallinks a {
+            color: white;
+            margin: 10px;
+            font-size: 14px;
+        }
+
+        .footer-sociallinks a:hover {
+            color: blue;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Cart.html">
+</head>
+
+<body class="bg-black text-white">
+
+    <!-- nav -->
+    <nav class="navbar  bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">Tech-Shop</a>
+
+            <div class="d-flex align-items-center">
+
+                <!-- Icons -->
+                <div class="icons">
+                    <a href="#" class="icons">
+                        <i class="fas fa-magnifying-glass" title="Search"></i>
+                    </a>
+                    <span class="icons">
+                        <i class="fas fa-user" data-bs-toggle="modal" data-bs-target="#exampleModal" title="User"></i>
+                    </span>
+                    <a href="# " class="icons">
+                        <i class="fas fa-cart-shopping" title="Cart"></i>
+                    </a>
+                </div>
+            </div>
+    </nav>
+
+    <!-- cart card -->
+    <div class="cart-content d-flex">
+        <div class="cart-items ">
+            <div class="cart-item">
+                <img src="../IMAGES/jbl660nc-1.png" alt="JBL Headphones" class="product-img">
+                <div class="item-details">
+                    <h4>JBL Live 600NC Wireless Over-Ear NC Headphones</Head>
+                    </h4>
+                    <div class="price">
+                        <span class="current-price">₹9,999</span>
+                        <span class="original-price">₹14,999</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="btn-decrement">-</button>
+                        <span class="item-quantity">2</span>
+                        <button class="btn-increment">+</button>
+                    </div>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+
+            <div class="cart-item">
+                <img src="../IMAGES/boat518-1.png" alt="Boat Headphones" class="product-img">
+                <div class="item-details">
+                    <h4>boAt Rockerz 518 On-Ear Wireless Headphones</h4>
+                    <div class="price">
+                        <span class="current-price">₹1,299</span>
+                        <span class="original-price">₹3,990</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="btn-decrement">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="btn-increment">+</button>
+                    </div>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+
+            <div class="cart-item">
+                <img src="../IMAGES/boat131-1.png" alt="boAt Airdopes" class="product-img">
+                <div class="item-details">
+                    <h4>boAt Airdopes 131 Wireless in-Ear Earbuds</h4>
+                    <div class="price">
+                        <span class="current-price">₹1,099</span>
+                        <span class="original-price">₹2,999</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="btn-decrement">-</button>
+                        <span class="item-quantity">3</span>
+                        <button class="btn-increment">+</button>
+                    </div>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+
+            <div class="cart-item">
+                <img src="../IMAGES/jbl200bt-1.png" alt="JBL Earphones" class="product-img">
+                <div class="item-details">
+                    <h4>JBL Live 200BT In-Ear Wireless Neckbands</h4>
+                    <div class="price">
+                        <span class="current-price">₹3,699</span>
+                        <span class="original-price">₹5,299</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="btn-decrement">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="btn-increment">+</button>
+                    </div>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+
+            <div class="cart-item">
+                <img src="../IMAGES/boat255r-1.png" alt="boAt NeckBands" class="product-img">
+                <div class="item-details">
+                    <h4>boAt Rockerz 255 In-Ear Wireless Neckbands</h4>
+                    <div class="price">
+                        <span class="current-price">₹899</span>
+                        <span class="original-price">₹2,990</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="btn-decrement">-</button>
+                        <span class="item-quantity">1</span>
+                        <button class="btn-increment">+</button>
+                    </div>
+                </div>
+                <i class="fa fa-trash delete-icon"></i>
+            </div>
+        </div>
+
+        <div class="order-summary ">
+            <h3>Order Summary (5 items)</h3>
+            <div class="summary-item">
+                <span>Original Price</span>
+                <span>₹51,274</span>
+            </div>
+            <div class="summary-item">
+                <span>Discount</span>
+                <span class="discount">₹-20,061</span>
+            </div>
+            <div class="summary-item ">
+                <span>Delivery</span>
+                <span class="free">Free</span>
+            </div>
+            <hr style="width: 90%; margin-top: 20px; margin-bottom: 20px;">
+            <div class="total">
+                <span>Total Price</span>
+                <span>₹31,213</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer Section  -->
+
+    <footer>
+        <div class="footer-fullpage">
+
+            <div class="footer-leftside">
+                <h2>Tech-Shop</h2>
+                <p>Subscribe to our Email alerts to recieve early discount offers, and new products info.
+                </p>
+                <form>
+                    <input type="email" class="form-email" placeholder="Email Address*" required><br>
+                    <button type="submit" class="form-button">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-rightside help">
+                <h3>Help</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Cancel Order</a></li>
+                    <li><a href="#">Return Order</a></li>
+                    <li><a href="#">Waranty Info</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-rightside policies">
+                <h3>Policies</h3>
+                <ul>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-rightside company">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Services Centres</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-end">
+            <p>2024 | All Rights Reserved. Built by | <strong>@PRAVINRAJ M V</strong></p>
+            <div class="footer-sociallinks">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

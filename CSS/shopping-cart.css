@@ -1,0 +1,36 @@
+    body {
+        background-color: #121212;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+    }
+
+    .product-card {
+        text-align: center;
+    }
+
+    .product-card img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .product-card h5,
+    .product-card p {
+        margin: 0;
+    }
+
+    .price {
+        color: #28a745;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .old-price {
+        color: #888;
+        text-decoration: line-through;
+        font-size: 0.9rem;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        background-color: white;
+    }
